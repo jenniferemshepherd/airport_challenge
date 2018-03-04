@@ -4,7 +4,7 @@ Airport Challenge
 ```
         ______
         _\____\___
-=  = ==(____MA____)
+=  = ==(____JS____)
           \_____\___________________,-~~~~~~~`-.._
           /     o o o o o o o o o o o o o o o o  |\_
           `~-.__       __..----..__                  )
@@ -15,13 +15,14 @@ Airport Challenge
 
 BRIEF SUMMARY OF MY APPROACH BY JENNIFER
 
-Before starting this challenge I read over quite a lot of notes and WGR to consolidate from the week and build my confidence through confirming what I already knew.  When I started the challenge, I had some issues with the gems and Ruby versions (despite changing to 2.4.0) so I altered the Gemfile itself to reflect 2.4.1 so that I could crack on and deal with this issue on Monday.
+* Before starting this challenge I read over quite a lot of notes and WGR to consolidate from the week and build my confidence through confirming what I already knew.  When I started the challenge, I had some issues with the gems and Ruby versions (despite changing to 2.4.0) so I altered the Gemfile itself to reflect 2.4.1 so that I could crack on and deal with this issue on Monday.
+* I approached the problem similarly to the Boris Bikes, by getting into the rhythm of feature testing then writing, running and passing RSPEC tests.  I spent some time considering responsibilities (as I wanted landing and taking off to be the plane's: the user story was explicit about 'instructing') but ended up assigning most responsibilities to the airport.  I'm not sure I would do it this way again.
+* Most of the stories were relatively straightforward to implement.  What I found more difficult were negotiating private methods, and keeping it DRY regarding the doubles.  There is so much unfamiliar language in my research that I need to continue to practice.  I would like to more thoroughly check for edge cases.
 
-I approached the problem similarly to the Boris Bikes, by getting into the rhythm of feature testing then writing, running and passing RSPEC tests.  I spent some time considering responsibilities (as I wanted landing and taking off to be the plane's: the user story was explicit about 'instructing') but ended up assigning most responsibilities to the airport.  I'm not sure I would do it this way again.
-
-Most of the stories were relatively straightforward to implement.  What I found more difficult were negotiating private methods, and keeping it DRY regarding the doubles.  There is so much unfamiliar language in my research that I need to continue to practice.  I would like to more thoroughly check for edge cases.
-
-With more time I would also explore the feature test file, but I wanted to approach that with a fresh mind knowing that this part was done, as I have many questions about it.
+Points for development:
+* check for edge cases
+* use an airport controller class to liaise between planes and airports
+* explore the feature test file
 
 
 Steps
@@ -46,7 +47,7 @@ N.B. this will confirm take off
 
 Irb usage
 ---------
-
+```
 2.4.0 :001 > require './lib/airport.rb'
  => true
 2.4.0 :002 > airport = Airport.new
@@ -55,7 +56,7 @@ Irb usage
  => #<Plane:0x007fce66821388 @airborne=true>
 2.4.0 :004 > airport.land(plane)
  => [#<Plane:0x007fce66821388 @airborne=false>]
-
+```
 
 User Stories
 ------------
